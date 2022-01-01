@@ -50,7 +50,7 @@ while (round < 100) {
 
 /*
     ****Aclaracion****
-    Si yo le doy 10 rondas ninguno de los dos bandos ganas
+    Si yo le doy 10 rondas ninguno de los dos bandos gana
     En cambio si de le doy 100 rondas como maximo se pueden dar los 3 resultados:
-    Que empaten o que alguno de los badnos gane.
+    Que empaten o que alguno de los bandos gane.
 */

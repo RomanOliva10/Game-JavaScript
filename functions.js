@@ -14,13 +14,13 @@ function valuesRandom(min, max) {
 function attackPlayerCalculator(i, player, enemy) {
     //Se calcula el ataque total
     let totalAttack = enemy[i].attack - player.defense;
-    //Si se da casualidad que el ataque total da negativo el ataque total pasa a ser 0
+    //Si se da la casualidad que el ataque total da negativo el ataque total pasa a ser 0
     if(totalAttack < 0){
         totalAttack = 0;
         console.log("The enemy's attack is weak against the defense");
     }
     /*
-        Si la casualidad que el ataque final es mayor a la vida del player
+        Si se da la casualidad que el ataque final es mayor a la vida del player
         El ataque total pasa a ser igual a la vida player
         Asi nunca quedara en negativo la vida del player
     */

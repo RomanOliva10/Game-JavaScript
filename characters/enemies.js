@@ -1,5 +1,5 @@
 import { Player } from "./player.js";
-import { valuesRandom } from "../functions.js"
+import { valuesRandom , orderByHealth} from "../functions.js"
 class Enemy extends Player {
   constructor( health, attack, defense) {
     super(health, attack, defense);
@@ -14,8 +14,6 @@ for (let i = 0; i < 5; i++) {
   enemys.push(enemy);
 }
 //Ordeno al array de acuerdo a la vida de los enemigos
-enemys.sort((a,b)=>{
-  return b.health - a.health;
-})
+orderByHealth(enemys)
 
 export { enemys };

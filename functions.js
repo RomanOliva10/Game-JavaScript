@@ -1,14 +1,29 @@
-//Se hace una validacion para que los atributos del Player sean de acuerdo los propuestos en el ejercicio
-function valuesValidator(min, max, atribute) {
+/*
+    Se hace una validacion para que los atributos del Player sean de acuerdo los propuestos en el ejercicio.
+    Hice una resturcturacion de la funcion por que realmente no funcionaba,
+    osea el valor inicial siempre iba a hacer el mismo, no cambiaba con la validacion.
+*/
+function valuesValidator(min, max, name) {
+    let atribute = prompt(`Introduces the ${name} of your character (min: ${min}, max: ${max})`);
+
     while (atribute < min || atribute > max) {
-        if (atribute < min || atribute > max) {
-            atribute = prompt(`Introduces the atribute correctly`);
-        }
+        atribute = prompt(`Introduces the ${name} correctly (min: ${min}, max: ${max})`);
     }
+    return atribute;
 }
 //Se crean los atributos para los enemigos
 function valuesRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
+}
+//Con una funcion se ordena el array de enemigos de acuerdo a su salud
+function orderByHealth(enemys) {
+    for (var i = 0; i < enemys.length; i++) {
+      for (var j = 0; j < enemys.length - i - 1; j++) {
+        if (enemys[j].health < enemys[j + 1].health) {
+          [enemys[j], enemys[j + 1]] = [enemys[j + 1], enemys[j]];
+        }
+      }
+    }
 }
 
 function attackPlayerCalculator(i, player, enemy) {
@@ -47,4 +62,4 @@ function attackEnemyCalculator(i, player, enemy) {
     return enemy[i].health - totalAttack;
 }
 
-export {valuesValidator, valuesRandom, attackPlayerCalculator, attackEnemyCalculator};
+export {valuesValidator, valuesRandom, attackPlayerCalculator, attackEnemyCalculator, orderByHealth};

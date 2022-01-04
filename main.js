@@ -3,7 +3,6 @@ import { player } from "./characters/player.js";
 import { enemys } from "./characters/enemies.js";
 //Funciones
 import { attackEnemyCalculator, attackPlayerCalculator } from "./functions.js";
-
 console.log(player);
 console.log(enemys);
 

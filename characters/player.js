@@ -35,20 +35,11 @@ class Player {
 }
 
 
-let health = prompt(
-    "Introduces the health of your character(min: 1000, max:2000)"
-);
-valuesValidator(1000, 2000, health);
+let health = valuesValidator(1000, 2000, "health");
 
-let attack = prompt(
-    "Introduces the attack of your character(min: 100, max:200)"
-);
-valuesValidator(100, 200, attack);
+let attack = valuesValidator(100, 200 , "attack");
 
-let defense = prompt(
-    "Introduces the defence of your character(min: 50, max:75)"
-);
-valuesValidator(50, 75, defense);
+let defense = valuesValidator(50, 75, "defense");
 
 let player = new Player(health, attack, defense);
 
